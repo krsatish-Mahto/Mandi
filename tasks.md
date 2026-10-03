@@ -12,7 +12,7 @@
 
 | # | Module | Priority | Est. Hours | Status | Dependencies |
 |---|--------|----------|------------|--------|--------------|
-| 1 | Frontend Setup | High | 16 | Todo | None |
+| 1 | Frontend Setup | High | 16 | Done | None |
 | 2 | Database & Backend Setup | High | 24 | Todo | None |
 | 3 | Authentication | High | 40 | Todo | Database & Backend Setup, Frontend Setup |
 | 4 | User Profile | High | 32 | Todo | Authentication |
@@ -29,43 +29,43 @@
 **Module Goal:** Set up React project with build tools, styling framework, and project structure  
 **Priority:** High  
 **Estimated Hours:** 16  
-**Status:** Todo  
+**Status:** Done  
 **Dependencies:** None
 
 ### Sub-tasks
 
 #### 1.1 Initialize React Project with Vite
-- [ ] Create React app using Vite
-- [ ] Install Node dependencies (React, ReactDOM, etc.)
-- [ ] Configure Vite for development and production
-- [ ] Set up .env.example file
+- [x] Create React app using Vite
+- [x] Install Node dependencies (React, ReactDOM, etc.)
+- [x] Configure Vite for development and production
+- [x] Set up .env.example file
 - **Est. Hours:** 3 | **Priority:** High | **Dependencies:** None
 
 #### 1.2 Install & Configure TailwindCSS
-- [ ] Install TailwindCSS and dependencies
-- [ ] Configure tailwind.config.js with design tokens
-- [ ] Set up CSS custom properties (colors, spacing, etc.)
-- [ ] Create base styles file
+- [x] Install TailwindCSS and dependencies
+- [x] Configure tailwind.config.js with design tokens
+- [x] Set up CSS custom properties (colors, spacing, etc.)
+- [x] Create base styles file
 - **Est. Hours:** 3 | **Priority:** High | **Dependencies:** 1.1
 
 #### 1.3 Set Up Project Structure
-- [ ] Create folder structure: src/{components, pages, hooks, services, utils, styles}
-- [ ] Set up App.jsx and main.jsx entry point
-- [ ] Create basic page components (HomePage, AuthPage, etc.)
+- [x] Create folder structure: src/{components, pages, hooks, services, utils, styles}
+- [x] Set up App.jsx and main.jsx entry point
+- [x] Create basic page components (HomePage, AuthPage, etc.)
 - **Est. Hours:** 3 | **Priority:** High | **Dependencies:** 1.2
 
 #### 1.4 Install & Configure HTTP Client & Socket.io
-- [ ] Install Axios for API calls
-- [ ] Install Socket.io client for real-time chat
-- [ ] Create API service wrapper (api.js)
-- [ ] Create Socket.io service wrapper (socket.js)
+- [x] Install Axios for API calls
+- [x] Install Socket.io client for real-time chat
+- [x] Create API service wrapper (api.js)
+- [x] Create Socket.io service wrapper (socket.js)
 - **Est. Hours:** 4 | **Priority:** High | **Dependencies:** 1.3
 
 #### 1.5 Set Up Routing
-- [ ] Install React Router
-- [ ] Create route structure (home, auth, listings, chat, profile)
-- [ ] Set up protected routes (authentication required)
-- [ ] Create route guards for conditional redirects
+- [x] Install React Router
+- [x] Create route structure (home, auth, listings, chat, profile)
+- [x] Set up protected routes (authentication required)
+- [x] Create route guards for conditional redirects
 - **Est. Hours:** 3 | **Priority:** High | **Dependencies:** 1.4
 
 ---

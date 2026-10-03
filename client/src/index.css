@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-dark font-sans;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  h3 {
+    @apply text-xl font-semibold;
+  }
+
+  h4 {
+    @apply text-lg font-semibold;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+
+  a {
+    @apply text-primary hover:underline;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-primary text-white font-semibold py-3 px-6 rounded-md hover:bg-opacity-90 transition-all duration-200 ease-in-out cursor-pointer disabled:bg-medium-gray disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-primary text-primary font-semibold py-3 px-6 rounded-md hover:bg-light-gray transition-all duration-200 ease-in-out cursor-pointer disabled:text-medium-gray disabled:border-medium-gray disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply bg-error text-white font-semibold py-3 px-6 rounded-md hover:bg-opacity-90 transition-all duration-200 ease-in-out cursor-pointer disabled:bg-medium-gray disabled:cursor-not-allowed;
+  }
+
+  .btn-small {
+    @apply py-2 px-4 text-sm;
+  }
+
+  .btn-large {
+    @apply py-4 px-8 text-lg;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .card-lg {
+    @apply bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200;
+  }
+
+  /* Input Fields */
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-200;
+  }
+
+  .input-field:disabled {
+    @apply bg-light-gray text-medium-gray cursor-not-allowed;
+  }
+
+  /* Forms */
+  .form-group {
+    @apply mb-4;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-dark mb-2;
+  }
+
+  .form-error {
+    @apply text-error text-sm mt-1;
+  }
+
+  /* Containers */
+  .container-primary {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-8 sm:py-12 lg:py-16;
+  }
+
+  /* Grid */
+  .grid-responsive {
+    @apply grid gap-4 sm:grid-cols-2 lg:grid-cols-3;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-block px-3 py-1 text-sm font-medium rounded-full;
+  }
+
+  .badge-success {
+    @apply bg-success text-white;
+  }
+
+  .badge-warning {
+    @apply bg-warning text-dark;
+  }
+
+  .badge-error {
+    @apply bg-error text-white;
+  }
+
+  .badge-info {
+    @apply bg-info text-white;
+  }
+
+  /* Flexbox utilities */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  /* Text utilities */
+  .text-truncate {
+    @apply truncate;
+  }
+
+  .text-ellipsis {
+    @apply line-clamp-2;
+  }
+
+  /* Loading state */
+  .spinner {
+    @apply inline-block w-6 h-6 border-4 border-primary border-t-transparent rounded-full animate-spin;
+  }
+}
+
+/* Animations */
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInTop {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInBottom {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .animate-slide-in-top {
+    animation: slideInTop 0.3s ease-in-out;
+  }
+
+  .animate-slide-in-bottom {
+    animation: slideInBottom 0.3s ease-in-out;
+  }
+}

@@ -1,13 +1,15 @@
 import { useState, useCallback } from 'react';
+import type { Dispatch, SetStateAction } from 'react';
+import type { User } from '../types';
 import { setToken, getToken, setUser, getUser, removeToken, removeUser } from '../utils/helpers';
 
 export const useAuth = () => {
-  const [user, setUserState] = useState(getUser());
-  const [token, setTokenState] = useState(getToken());
+  const [user, setUserState] = useState<User | null>(getUser());
+  const [token, setTokenState] = useState<string | null>(getToken());
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
-  const login = useCallback((authToken, userData) => {
+  const login = useCallback((authToken: string, userData: User) => {
     setToken(authToken);
     setUser(userData);
     setTokenState(authToken);
@@ -23,7 +25,7 @@ export const useAuth = () => {
     setError(null);
   }, []);
 
-  const updateUser = useCallback((userData) => {
+  const updateUser = useCallback((userData: User) => {
     setUser(userData);
     setUserState(userData);
   }, []);
@@ -39,7 +41,7 @@ export const useAuth = () => {
     logout,
     updateUser,
     isAuthenticated,
-    setLoading,
-    setError,
+    setLoading: setLoading as Dispatch<SetStateAction<boolean>>,
+    setError: setError as Dispatch<SetStateAction<string | null>>,
   };
 };

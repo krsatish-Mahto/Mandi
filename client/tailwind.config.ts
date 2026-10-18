@@ -1,0 +1,115 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  theme: {
+    colors: {
+      white: '#FFFFFF',
+      black: '#000000',
+      transparent: 'transparent',
+      primary: '#006400', // Forest Green
+      dark: '#0D0D0D', // Almost Black
+      success: '#28A745',
+      warning: '#FFC107',
+      error: '#DC3545',
+      info: '#17A2B8',
+      gray: {
+        50: '#F8F9FA',
+        100: '#F1F3F5',
+        200: '#E9ECEF',
+        300: '#DEE2E6',
+        400: '#CED4DA',
+        500: '#ADB5BD',
+        600: '#6C757D',
+        700: '#495057',
+        800: '#343A40',
+        900: '#212529',
+      },
+      'light-gray': '#F8F9FA',
+      'medium-gray': '#6C757D',
+      'dark-gray': '#343A40',
+      green: {
+        50: '#F0FDF4',
+        100: '#DCFCE7',
+        200: '#BBF7D0',
+        300: '#86EFAC',
+        400: '#4ADE80',
+        500: '#22C55E',
+        600: '#16A34A',
+        700: '#15803D',
+        800: '#166534',
+        900: '#145231',
+        950: '#052E16',
+      },
+      amber: {
+        50: '#FFFBEB',
+        100: '#FEF3C7',
+        500: '#EAB308',
+        600: '#D97706',
+        800: '#92400E',
+      },
+      red: {
+        50: '#FEF2F2',
+        600: '#DC2626',
+      },
+      blue: {
+        400: '#60A5FA',
+        500: '#3B82F6',
+      },
+      yellow: {
+        500: '#EAB308',
+      },
+    },
+    spacing: {
+      0: '0',
+      1: '4px',
+      1.5: '6px',
+      2: '8px',
+      2.5: '10px',
+      3: '12px',
+      3.5: '14px',
+      4: '16px',
+      5: '20px',
+      6: '24px',
+      7: '28px',
+      8: '32px',
+      9: '36px',
+      10: '40px',
+      11: '44px',
+      12: '48px',
+      14: '56px',
+      16: '64px',
+      20: '80px',
+      24: '96px',
+      32: '128px',
+    },
+    borderRadius: {
+      none: '0',
+      sm: '4px',
+      md: '6px',
+      lg: '8px',
+      xl: '12px',
+      '2xl': '16px',
+      '3xl': '24px',
+      full: '9999px',
+    },
+    boxShadow: {
+      xs: '0 2px 8px rgba(0, 0, 0, 0.1)',
+      sm: '0 2px 8px rgba(0, 0, 0, 0.1)',
+      md: '0 4px 12px rgba(0, 0, 0, 0.15)',
+      lg: '0 10px 30px rgba(0, 0, 0, 0.3)',
+      xl: '0 20px 40px rgba(0, 0, 0, 0.25)',
+    },
+    fontFamily: {
+      sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+    },
+    extend: {
+      screens: {
+        xs: '480px',
+      },
+    },
+  },
+  plugins: [],
+}
+
+export default config

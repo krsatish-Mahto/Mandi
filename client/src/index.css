@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+@config "../tailwind.config.ts";
 
 /* Custom base styles */
 @layer base {
@@ -41,7 +41,7 @@
 @layer components {
   /* Buttons */
   .btn-primary {
-    @apply bg-primary text-white font-semibold py-3 px-6 rounded-md hover:bg-opacity-90 transition-all duration-200 ease-in-out cursor-pointer disabled:bg-medium-gray disabled:cursor-not-allowed;
+    @apply bg-primary text-white font-semibold py-3 px-6 rounded-md hover:bg-primary/90 transition-all duration-200 ease-in-out cursor-pointer disabled:bg-medium-gray disabled:cursor-not-allowed;
   }
 
   .btn-secondary {
@@ -49,7 +49,7 @@
   }
 
   .btn-danger {
-    @apply bg-error text-white font-semibold py-3 px-6 rounded-md hover:bg-opacity-90 transition-all duration-200 ease-in-out cursor-pointer disabled:bg-medium-gray disabled:cursor-not-allowed;
+    @apply bg-error text-white font-semibold py-3 px-6 rounded-md hover:bg-error/90 transition-all duration-200 ease-in-out cursor-pointer disabled:bg-medium-gray disabled:cursor-not-allowed;
   }
 
   .btn-small {
@@ -71,7 +71,7 @@
 
   /* Input Fields */
   .input-field {
-    @apply w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-200;
+    @apply w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200;
   }
 
   .input-field:disabled {
